@@ -2,13 +2,16 @@ package com.example.demo.reposirtory;
 
 import java.util.List;
 
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.example.demo.entites.Cinema;
 import com.example.demo.entites.Ville;
 
+@RepositoryRestResource (path = "rest") 
 public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
 	List<Cinema> findByNom(String nom);

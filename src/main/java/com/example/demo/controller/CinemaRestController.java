@@ -22,7 +22,7 @@ public class CinemaRestController {
 	@Autowired
 	CinemaServiceImp cinemaServiceImp;
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(path = "all",method = RequestMethod.GET)
 	public List<Cinema> getAllCinelas() {
 		return cinemaServiceImp.getAllCinemas();
 	}
@@ -32,7 +32,7 @@ public class CinemaRestController {
 		return cinemaServiceImp.getCinema(id);
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(path = "add", method = RequestMethod.POST)
 	public Cinema createCinema(@RequestBody Cinema cinema) {
 		return cinemaServiceImp.saveCinema(cinema);
 	}

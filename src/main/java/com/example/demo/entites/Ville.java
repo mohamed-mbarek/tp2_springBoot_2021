@@ -26,6 +26,5 @@ private Long idVille;
 private String nom ;
 private Long codePostal ;
 @OneToMany(mappedBy = "ville")
-@JsonIgnore
 private List<Cinema>  cinemas;
 }
